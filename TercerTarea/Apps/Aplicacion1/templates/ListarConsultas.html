@@ -1,0 +1,34 @@
+
+ {% block contenido %}
+ 
+ <h2>LISTADO CONSULTAS</h2>
+ <table border=1>
+      <tr>
+           <td>NOMBRE</td>
+           <td>APELLIDO</td>
+           <td>TELEFONO</td>
+           <td>CORREO</td>
+           <td>TIPO DE HABITACION</td>
+           <td>CONSULTA</td>
+           <td>FECHA QUE SEA HOSPEDARSE</td>
+           
+
+
+
+      </tr>
+      {% for est in object_list %}
+      <tr>
+           <td>{{ est.nombre }}</td>
+           <td>{{ est.apellido }}</td>
+           <td>{{ est.telefono }}</td>
+           <td>{{ est.correo }}</td>
+           <td>{{ est.direccion }}</td>
+           <td>{{ est.consulta }}</td>
+           <td>{{ est.fecha }}</td>
+    
+     
+     </tr>      
+      {% endfor %}
+ </table>
+ <a href="{% url 'app1:base' %}">Regresar</a>
+ {% endblock %}

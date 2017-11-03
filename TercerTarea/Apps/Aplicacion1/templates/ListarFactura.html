@@ -1,0 +1,26 @@
+ {% block contenido %}
+ 
+ <h2>LISTADO DATOS DE FACTURACION</h2>
+ <table border=1>
+      <tr>
+           <td>Nombre</td>
+           <td>Apellido</td>
+           <td>Direccion</td>
+           <td>Nit</td>
+           <td>Total</td>
+         
+
+      </tr>
+      {% for est in object_list %}
+      <tr>
+           <td>{{ est.nombre }}</td>
+           <td>{{ est.apellido }}</td>
+           <td>{{ est.direccion }}</td>
+           <td>{{ est.nit }}</td>
+           <td>{{ est.cancelar }}</td>
+               
+     </tr>    
+      {% endfor %}
+ </table>
+  <a href="{% url 'app1:Factura' %}">Regresar</a>
+ {% endblock %}

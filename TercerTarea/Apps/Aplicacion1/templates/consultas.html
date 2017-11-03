@@ -1,0 +1,180 @@
+
+{% load staticfiles i18n  %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Login</title>
+
+    {% block css %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+    {% endblock %}
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">INNOVATIVE SOLUTIONS</a> 
+ 
+
+        <a href="{% url 'app1:Login' %}">Regresar</a>               
+        
+         
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <img class="img-fluid" src="img/profile.png" alt="">
+        <div class="intro-text">
+          <span class="name">CONSULTA</span>
+
+
+
+
+<form method="POST">
+     {% csrf_token %}
+     <table>
+     <h2> NOMBRE{{ form.nombre }} </h2>      
+     </table>
+     <table>
+     <h2> APELLIDO{{ form.apellido }} </h2>      
+     </table>
+     <table>
+     <h2> TELEFONO{{ form.telefono }} </h2>       
+     </table>
+     <table>
+     <h2> TIPO DE HABITACION{{ form.direccion }} </h2>       
+     </table>
+     <table>
+     <h2> CORREO{{ form.correo }} </h2>     
+     </table>
+     <table>
+     <h2> CONSULTA{{ form.consulta }} </h2>     
+     </table>
+     <table>
+     <h2> FECHA QUE DESEA RESERVAR{{ form.fecha }} 21/10/1898 </h2>     
+     </table>
+     
+     <input type="submit" name="Guardar">
+ </form>
+
+         
+          
+        </div>
+      </div>
+    </header>
+    
+    {% block main %}
+
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>UBICANOS</h3>
+              <p>QUETZALTENANGO
+                <br>CALLE "A" D15-95 ZONA 1 FRENTE AL LICEO GUATEMALA</p>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>Around the Web</h3>
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-google-plus"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="btn-social btn-outline" href="#">
+                    <i class="fa fa-fw fa-dribbble"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col col-md-4">
+              <h3>About Freelancer</h3>
+              <p>Freelance is a free to use, open source Bootstrap theme created by
+                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Your Website 2017
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top d-lg-none">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    {% block js %}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/popper/popper.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/freelancer.min.js' %}"></script>
+
+    {% endblock %}
+
+  </body>
+
+</html>
+ 

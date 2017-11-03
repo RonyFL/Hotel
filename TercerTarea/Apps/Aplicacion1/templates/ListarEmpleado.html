@@ -1,0 +1,28 @@
+
+ {% block contenido %}
+ 
+ <h2>LISTADO RESERVACIONES</h2>
+ <table border=1>
+      <tr>
+           <td>NOMBRE</td>
+           <td>APELLIDO</td>
+           <td>TELEFONO</td>
+           <td>TIPO HABITACION</td>
+           <td>NUMERO HABITACION</td>
+           <td>FECHA INGRESO</td>
+
+      </tr>
+      {% for est in object_list %}
+      <tr>
+           <td>{{ est.nombre }}</td>
+           <td>{{ est.apellido }}</td>
+           <td>{{ est.telefono }}</td>
+           <td>{{ est.tipo }}</td>
+           <td>{{ est.numero }}</td>
+           <td>{{ est.ingreso }}</td>
+    
+     </tr>      
+      {% endfor %}
+ </table>
+<a href="{% url 'app1:Addcrearcliente' %}">Regresar</a>
+ {% endblock %}

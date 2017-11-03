@@ -1,0 +1,31 @@
+
+ {% block contenido %}
+ 
+ <h2>LISTADO CLIENTES</h2>
+ <table border=1>
+      <tr>
+           <td>Nombre</td>
+           <td>Apellido</td>
+           <td>Telefono</td>
+           <td>Equipo</td>
+           <td>Descripcion</td>
+           <td>Tecnico</td>
+
+      </tr>
+      {% for est in object_list %}
+      <tr>
+           <td>{{ est.nombre }}</td>
+           <td>{{ est.apellido }}</td>
+           <td>{{ est.telefono }}</td>
+           <td>{{ est.equipo }}</td>
+           <td>{{ est.descripcion }}</td>
+           <td>{{ est.tecnico }}</td>
+    
+
+
+     </tr>      
+      {% endfor %}
+ </table>
+ <a href="{% url 'app1:Addcrearadmin' %}">Regresar</a>
+
+ {% endblock %}
